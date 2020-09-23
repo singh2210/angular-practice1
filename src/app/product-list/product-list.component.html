@@ -1,15 +1,24 @@
+<div class="width-100 mb-90">
 <h2>Products</h2>
+
 <div *ngFor="let product of products">
-<h3>
+
+<div class="col-5">
+<h2>
   <a [title]="product.name + ' details'">
       {{ product.name }}
     </a>
-</h3>
+</h2>
 <p *ngIf="product.description">
   {{product.description}}
 </p>
+<h3>
+  Rs. {{ product.price }}
+</h3>
 <button (click)="share()">
     Share
   </button>
+</div>
 <!-- <button click()="share()">Share</button> -->
+</div>
 </div>
